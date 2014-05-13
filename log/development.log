@@ -1,0 +1,1860 @@
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20140310213347)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140310213347"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20140513204145)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "post_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204145"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20140513204227)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204227"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTags (20140513204345)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204345"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePostTags (20140513204421)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "post_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "tag_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204421"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (8.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20140310213347)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140310213347"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20140513204145)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "post_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204145"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20140513204227)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204227"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTags (20140513204345)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204345"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePostTags (20140513204421)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "post_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "tag_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204421"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (8.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20140310213347)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140310213347"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20140513204227)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204227"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTags (20140513204345)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204345"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePostTags (20140513204421)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "post_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "tag_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204421"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20140310213347)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "content" text, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140310213347"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20140513204227)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204227"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTags (20140513204345)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204345"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePostTags (20140513204421)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "post_tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "tag_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513204421"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "adorable"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (7.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "adventurous"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "aggressive"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "agreeable"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "alert"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "alive"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "amused"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "angry"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "annoyed"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "annoying"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "anxious"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "arrogant"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "ashamed"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "attractive"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "average"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "awful"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "bad"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "beautiful"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "better"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "bewildered"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "black"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "bloody"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "blue"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "blue-eyed"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "blushing"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "bored"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "brainy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "brave"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "breakable"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "bright"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "busy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "calm"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "careful"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "cautious"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "charming"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "cheerful"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "clean"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "clear"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "clever"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "cloudy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "clumsy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "colorful"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "combative"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "comfortable"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "concerned"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "condemned"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "confused"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "cooperative"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "courageous"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "crazy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "creepy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "crowded"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "cruel"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "curious"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "cute"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "dangerous"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "dark"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "dead"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "defeated"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "defiant"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "delightful"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "depressed"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "determined"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "different"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "difficult"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "disgusted"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "distinct"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "disturbed"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "dizzy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "doubtful"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "drab"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "dull"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "eager"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "easy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "elated"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "elegant"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "embarrassed"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "enchanting"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "encouraging"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "energetic"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "enthusiastic"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "envious"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "evil"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "excited"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "expensive"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "exuberant"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "fair"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "faithful"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "famous"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "fancy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "fantastic"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "fierce"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "filthy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "fine"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "foolish"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "fragile"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "frail"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "frantic"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "friendly"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "frightened"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "funny"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "gentle"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "gifted"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "glamorous"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "gleaming"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "glorious"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "good"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "gorgeous"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "graceful"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "grieving"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "grotesque"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "grumpy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "handsome"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "happy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "healthy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "helpful"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "helpless"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "hilarious"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "homeless"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "homely"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "horrible"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "hungry"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "hurt"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "ill"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "important"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "impossible"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "inexpensive"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "innocent"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "inquisitive"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "itchy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "jealous"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "jittery"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "jolly"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "joyous"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "kind"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "lazy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "light"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "lively"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "lonely"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "long"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "lovely"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "lucky"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "magnificent"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "misty"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "modern"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "motionless"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "muddy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "mushy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "mysterious"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "nasty"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "naughty"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "nervous"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "nice"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "nutty"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "obedient"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "obnoxious"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "odd"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "old-fashioned"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "open"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "outrageous"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "outstanding"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "panicky"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "perfect"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "plain"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "pleasant"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "poised"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "poor"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "powerful"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "precious"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "prickly"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "proud"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "puzzled"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "quaint"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "real"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "relieved"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "repulsive"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "rich"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "scary"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "selfish"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "shiny"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "shy"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:29 UTC +00:00], ["name", "silly"], ["updated_at", Tue, 13 May 2014 21:35:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "sleepy"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "smiling"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "smoggy"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "sore"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "sparkling"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "splendid"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "spotless"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "stormy"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "strange"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "stupid"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "successful"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "super"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "talented"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "tame"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "tender"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "tense"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "terrible"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "testy"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "thankful"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "thoughtful"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "thoughtless"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "tired"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "tough"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "troubled"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "ugliest"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "ugly"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "uninterested"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "unsightly"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "unusual"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "upset"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "uptight"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "vast"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "victorious"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "vivacious"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "wandering"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "weary"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "wicked"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "wide-eyed"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "wild"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "witty"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "worrisome"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "worried"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (23.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "wrong"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "zany"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "zealous"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["content", "Kitty ipsum dolor sit amet, climb the curtains hairball lay down in your way rip the couch sunbathe, jump on the table stuck in a tree leap lay down in your way bat. Sleep on your keyboard puking catnip chuf, zzz purr hairball claw give me fish I don't like that food sunbathe. Knock over the lamp hiss knock over the lamp stuck in a tree give me fish, meow judging you biting climb the curtains sleep on your face sunbathe sleep on your face. Biting fluffy fur knock over the lamp zzz jump, scratched purr chuf eat the grass judging you sleep on your keyboard. Biting knock over the lamp knock over the lamp feed me, meow sleep in the sink catnip kittens sleep on your face attack. Judging you stuck in a tree zzz bat stuck in a tree puking, fluffy fur sleep on your keyboard kittens jump biting chase the red dot."], ["created_at", Tue, 13 May 2014 21:35:30 UTC +00:00], ["name", "Kittens!"], ["updated_at", Tue, 13 May 2014 21:35:30 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-13 17:35:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 14ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:35:54 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (1.5ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.6ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (65.7ms)
+Warning. Error encountered while saving cache 8c44ed0a66f0170ecd3c70a7623404da41fff6d4/posts.css.scssc: can't dump anonymous class #<Class:0x00000101b25a00>
+
+Warning. Error encountered while saving cache 8c44ed0a66f0170ecd3c70a7623404da41fff6d4/scaffolds.css.scssc: can't dump anonymous class #<Class:0x00000101b25a00>
+
+Completed 200 OK in 745ms (Views: 727.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 17:35:55 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 17:35:55 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 17:35:55 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 17:35:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 17:35:55 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 17:35:55 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 17:35:55 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 17:35:55 -0400
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:39:58 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (43.2ms)
+Completed 500 Internal Server Error in 47ms
+
+ActionView::Template::Error (undefined method `check_boxes' for #<ActionView::Helpers::FormBuilder:0x00000102129988>):
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= f.fields_for :tags do |t| %>
+    18:     <%= t.check_boxes :tag_id, Tag.all, :id, :name %>
+    19:   <% end %>
+    20:   <%= f.submit %>
+    21: <% end %>
+  app/views/posts/show.html.erb:18:in `block (2 levels) in _app_views_posts_show_html_erb__2941456611921772488_2164806280'
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2164806280'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2164806280'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:40:05 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (Unknown key: object):
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= f.fields_for :tags do |t| %>
+    18:     <%= t.check_box :tag_id, Tag.all, :id, :name %>
+    19:   <% end %>
+    20:   <%= f.submit %>
+    21: <% end %>
+  app/views/posts/show.html.erb:18:in `block (2 levels) in _app_views_posts_show_html_erb__2941456611921772488_2163663500'
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2163663500'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2163663500'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.8ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:43:44 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (Unknown key: object):
+    14: </p>
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= f.check_box :tag_id, Tag.all, :id, :name %>
+    18:   <%= f.submit %>
+    19: <% end %>
+    20: 
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2206749420'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2206749420'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (27.3ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:44:16 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `check_box_tag' for #<ActionView::Helpers::FormBuilder:0x00000103624270>):
+    14: </p>
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= f.check_box_tag :tag_id, Tag.all, :id, :name %>
+    18:   <%= f.submit %>
+    19: <% end %>
+    20: 
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2175542860'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2175542860'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:44:27 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `stringify_keys' for :name:Symbol):
+    14: </p>
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= check_box_tag :tag_id, Tag.all, :id, :name %>
+    18:   <%= f.submit %>
+    19: <% end %>
+    20: 
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2163965400'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2163965400'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:44:28 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `stringify_keys' for :name:Symbol):
+    14: </p>
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= check_box_tag :tag_id, Tag.all, :id, :name %>
+    18:   <%= f.submit %>
+    19: <% end %>
+    20: 
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2163965400'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2163965400'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:44:44 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1..4)):
+    14: </p>
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= f.check_box %>
+    18:   <%= f.submit %>
+    19: <% end %>
+    20: 
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2157232400'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2157232400'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:44:55 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `merge' for "two":String):
+    14: </p>
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= f.check_box("one", "two") %>
+    18:   <%= f.submit %>
+    19: <% end %>
+    20: 
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2156411160'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2156411160'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:45:17 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `tag' for #<Post:0x00000101ec4fa8>):
+    14: </p>
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= f.check_box :tag %>
+    18:   <%= f.submit %>
+    19: <% end %>
+    20: 
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2163653640'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2163653640'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:45:30 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 17:45:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 17:45:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 17:45:30 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 17:45:30 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 17:45:30 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 17:45:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 17:45:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 17:45:30 -0400
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:46:32 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (undefined method `check_box_tag' for #<ActionView::Helpers::FormBuilder:0x000001072b0d10>):
+    14: </p>
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= f.check_box_tag :tags %>
+    18:   <%= f.submit %>
+    19: <% end %>
+    20: 
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2207547800'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2207547800'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:50:07 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mTag Load (0.7ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered posts/show.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `merge' for #<Tag:0x00000101eae988>):
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= Tag.all.each do |tag| %>
+    18:     <%= f.check_box(tag.id, tag) %>
+    19:   <% end %>
+    20:   <%= f.submit %>
+    21: <% end %>
+  app/views/posts/show.html.erb:18:in `block (2 levels) in _app_views_posts_show_html_erb__2941456611921772488_2163297340'
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2163297340'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2163297340'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:52:16 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.6ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 17:52:16 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 17:52:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 17:52:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 17:52:16 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 17:52:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 17:52:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 17:52:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 17:52:16 -0400
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:53:36 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered posts/show.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 17:53:37 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 17:53:37 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 17:53:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 17:53:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 17:53:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 17:53:37 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 17:53:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 17:53:37 -0400
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:54:23 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.5ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 17:54:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 17:54:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 17:54:23 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 17:54:23 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 17:54:23 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 17:54:23 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 17:54:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 17:54:23 -0400
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:54:43 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered posts/show.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 47ms (Views: 43.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 17:54:43 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 17:54:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 17:54:43 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 17:54:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 17:54:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 17:54:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 17:54:43 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 17:54:43 -0400
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:55:00 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.6ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (64.2ms)
+Completed 200 OK in 72ms (Views: 68.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 17:55:00 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 17:55:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 17:55:00 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 17:55:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 17:55:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 17:55:00 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 17:55:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 17:55:00 -0400
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:55:22 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mTag Load (0.7ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered posts/show.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 17:55:22 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 17:55:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 17:55:22 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 17:55:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 17:55:22 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 17:55:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 17:55:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 17:55:22 -0400
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:56:39 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.5ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 17:56:39 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 17:56:39 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 17:56:39 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 17:56:39 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 17:56:39 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 17:56:39 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 17:56:39 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 17:56:39 -0400
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2014-05-13 17:56:45 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sIWxQ9WBMcTyz7vw3SNJo+pCLB2G6QLYJktsCRsFF0E=", "226"=>"zany", "227"=>"zealous", "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 400 Bad Request in 2ms
+
+ActionController::ParameterMissing (param not found: post):
+  app/controllers/posts_controller.rb:72:in `post_params'
+  app/controllers/posts_controller.rb:44:in `block in update'
+  app/controllers/posts_controller.rb:43:in `update'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (36.9ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.7ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 17:59:53 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.5ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 61ms (Views: 49.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 17:59:53 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 17:59:53 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 17:59:53 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 17:59:53 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 17:59:53 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 17:59:53 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 17:59:53 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 17:59:53 -0400
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2014-05-13 18:00:32 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sIWxQ9WBMcTyz7vw3SNJo+pCLB2G6QLYJktsCRsFF0E=", "post"=>{"tag_ids"=>["226", ""]}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Unpermitted parameters: tag_ids
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 18:00:32 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.6ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (70.1ms)
+Completed 200 OK in 77ms (Views: 73.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 18:00:32 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 18:00:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 18:00:32 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 18:00:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 18:00:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 18:00:32 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 18:00:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 18:00:32 -0400
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 18:00:44 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered posts/show.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 18:00:44 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 18:00:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 18:00:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 18:00:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 18:00:44 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 18:00:44 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 18:00:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 18:00:44 -0400
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT 1
+  [1m[36mTag Load (1.5ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mPostTag Load (0.2ms)[0m  SELECT "post_tags".* FROM "post_tags"
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 18:03:37 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.6ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `tag_id' for #<Tag:0x00000108a39db0>):
+    14: </p>
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= f.collection_check_boxes :tag_ids, Tag.all, :tag_id, :name %>
+    18:   <%= f.submit %>
+    19: <% end %>
+    20: 
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__2941456611921772488_2218872460'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__2941456611921772488_2218872460'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 18:04:21 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered posts/show.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 67ms (Views: 55.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 18:04:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 18:04:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 18:04:22 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 18:04:22 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 18:04:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 18:04:22 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 18:04:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 18:04:22 -0400
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2014-05-13 18:04:26 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sIWxQ9WBMcTyz7vw3SNJo+pCLB2G6QLYJktsCRsFF0E=", "post"=>{"tag_ids"=>["4", ""]}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `pry' for #<Binding:0x000001075194d0>):
+  app/controllers/posts_controller.rb:43:in `update'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 18:04:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (3.5ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.7ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (104.3ms)
+Completed 200 OK in 195ms (Views: 169.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 18:04:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 18:04:54 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 18:04:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 18:04:54 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 18:04:54 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 18:04:54 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 18:04:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 18:04:54 -0400
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2014-05-13 18:04:57 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sIWxQ9WBMcTyz7vw3SNJo+pCLB2G6QLYJktsCRsFF0E=", "post"=>{"tag_ids"=>["128", ""]}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Unpermitted parameters: tag_ids
+Unpermitted parameters: tag_ids
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 78514ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 18:06:16 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.7ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (54.7ms)
+Completed 500 Internal Server Error in 68ms
+
+ActionView::Template::Error (undefined method `tag_id' for #<Post:0x00000104417288>):
+    14: </p>
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= f.collection_check_boxes :tag_id, Tag.all, :id, :name %>
+    18:   <%= f.submit %>
+    19: <% end %>
+    20: 
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb__1875903613488747250_2183329120'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb__1875903613488747250_2183329120'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 18:06:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (1.6ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.6ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (66.8ms)
+Completed 500 Internal Server Error in 91ms
+
+ActionView::Template::Error (undefined method `tag_id' for #<Post:0x000001037f2980>):
+    14: </p>
+    15: 
+    16: <%= form_for(@post) do |f| %>
+    17:   <%= f.collection_check_boxes :tag_id, Tag.all, :id, :name %>
+    18:   <%= f.submit %>
+    19: <% end %>
+    20: 
+  app/views/posts/show.html.erb:17:in `block in _app_views_posts_show_html_erb___1544892767061481895_2182008160'
+  app/views/posts/show.html.erb:16:in `_app_views_posts_show_html_erb___1544892767061481895_2182008160'
+
+
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/amandahimmelstoss/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 18:07:04 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered posts/show.html.erb within layouts/application (91.7ms)
+Completed 200 OK in 126ms (Views: 113.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 18:07:05 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 18:07:05 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 18:07:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 18:07:05 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 18:07:05 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 18:07:05 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 18:07:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 18:07:05 -0400
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2014-05-13 18:07:08 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sIWxQ9WBMcTyz7vw3SNJo+pCLB2G6QLYJktsCRsFF0E=", "post"=>{"tag_ids"=>["96", ""]}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+Unpermitted parameters: tag_ids
+Unpermitted parameters: tag_ids
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 45151ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 18:07:54 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?  [["post_id", 1]]
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+  Rendered posts/show.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 18:07:54 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 18:07:54 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 18:07:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 18:07:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 18:07:54 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 18:07:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 18:07:54 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 18:07:54 -0400
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 18:08:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (1.8ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.6ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (116.3ms)
+Completed 200 OK in 195ms (Views: 168.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 18:08:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 18:08:06 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 18:08:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 18:08:06 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 18:08:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 18:08:06 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 18:08:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 18:08:06 -0400
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2014-05-13 18:08:09 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sIWxQ9WBMcTyz7vw3SNJo+pCLB2G6QLYJktsCRsFF0E=", "post"=>{"tag_ids"=>["114", ""]}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Unpermitted parameters: tag_ids
+Unpermitted parameters: tag_ids
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 8421ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2014-05-13 18:08:17 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "post_tags" ON "tags"."id" = "post_tags"."tag_id" WHERE "post_tags"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mTag Load (0.5ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered posts/show.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-13 18:08:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-13 18:08:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-13 18:08:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-13 18:08:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-13 18:08:17 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-13 18:08:17 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-13 18:08:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-13 18:08:17 -0400
