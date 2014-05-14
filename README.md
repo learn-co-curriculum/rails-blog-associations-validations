@@ -29,7 +29,7 @@ Let's add the following validations on:
 
 Active Record handles errors when validations aren't met via user input on our forms. Take a look at what's happening in the partial `_form.html.erb` for users, which was generated when we scaffolded:
 
-```ruby
+```
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
