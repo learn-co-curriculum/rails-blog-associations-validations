@@ -48,7 +48,7 @@ Active Record handles errors when validations aren't met via user input on our f
   <% end %>
 ```
 
-Build out the forms for creating a new user, post, and tag and make the tests pass.
+Build out the forms for creating a new user, post, and tag and make the tests pass. Don't worry about the failing scaffolded controller tests that are failing; our validation tests in the models are now covering that.
 
 ## Adding tags to a post
 
