@@ -4455,3 +4455,130 @@ Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-14 10:26:34 -0400
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-14 10:26:34 -0400
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-05-14 13:19:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 78ms (Views: 64.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:46 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:46 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:46 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:46 -0400
+
+
+Started GET "/tags/1" for 127.0.0.1 at 2014-05-14 13:19:50 -0400
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered tags/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:50 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:50 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:50 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:50 -0400
+
+
+Started GET "/tags/" for 127.0.0.1 at 2014-05-14 13:19:55 -0400
+Processing by TagsController#index as HTML
+  [1m[35mTag Load (1.0ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered tags/index.html.erb within layouts/application (138.4ms)
+Completed 200 OK in 144ms (Views: 142.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:55 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:55 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:55 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:55 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:55 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:55 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:55 -0400
+
+
+Started GET "/users/" for 127.0.0.1 at 2014-05-14 13:19:58 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:58 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-05-14 13:19:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:58 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-14 13:19:58 -0400
