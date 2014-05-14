@@ -46,9 +46,6 @@ Active Record handles errors when validations aren't met via user input on our f
 
 Build out the forms for creating a new user, post, and tag and make the tests pass.
 
-TODO: tests
-seed file in master branch
-
 ## Adding tags to a post
 
 You've got a great post on kittens that was generated via the seed file, but you want to add some tags, for a later feature that will help readers search for posts. Create a form on the posts show page that lists all the tags as checkboxes that.
