@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <h3>Name:</h3>
   <%= @post.name %>
-  <strong>Content:</strong>
+  <h3>Content:</h3>
   <%= @post.content %>
-  <strong>Tags:</strong>
+  <h3>Tags:</h3>
   <ul>
     <% @post.tags.each do |tag| %>
-    <li><%= tag %></li>
+    <li><%= tag.name %></li>
     <% end %>
   </ul>
 </p>
@@ -17,7 +17,6 @@
   <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name %>
   <%= f.submit %>
 <% end %>
-
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
