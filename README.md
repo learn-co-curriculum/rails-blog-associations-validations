@@ -1,5 +1,5 @@
 ---
-tags: rails, associations, validations, join tables, strong params, WIP
+tags: rails, associations, validations, join tables, strong params
 language: ruby
 resources: 3
 ---
