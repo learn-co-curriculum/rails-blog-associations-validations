@@ -81,21 +81,6 @@ describe TagsController do
       end
     end
 
-    describe "with invalid params" do
-      it "assigns a newly created but unsaved tag as @tag" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        Tag.any_instance.stub(:save).and_return(false)
-        post :create, {:tag => {  }}, valid_session
-        assigns(:tag).should be_a_new(Tag)
-      end
-
-      it "re-renders the 'new' template" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        Tag.any_instance.stub(:save).and_return(false)
-        post :create, {:tag => {  }}, valid_session
-        response.should render_template("new")
-      end
-    end
   end
 
   describe "PUT update" do
@@ -106,8 +91,8 @@ describe TagsController do
         # specifies that the Tag created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Tag.any_instance.should_receive(:update).with({ "these" => "params" })
-        put :update, {:id => tag.to_param, :tag => { "these" => "params" }}, valid_session
+        Tag.any_instance.should_receive(:update).with({ "name" => "params" })
+        put :update, {:id => tag.to_param, :tag => { "name" => "params" }}, valid_session
       end
 
       it "assigns the requested tag as @tag" do
@@ -123,23 +108,6 @@ describe TagsController do
       end
     end
 
-    describe "with invalid params" do
-      it "assigns the tag as @tag" do
-        tag = Tag.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Tag.any_instance.stub(:save).and_return(false)
-        put :update, {:id => tag.to_param, :tag => {  }}, valid_session
-        assigns(:tag).should eq(tag)
-      end
-
-      it "re-renders the 'edit' template" do
-        tag = Tag.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Tag.any_instance.stub(:save).and_return(false)
-        put :update, {:id => tag.to_param, :tag => {  }}, valid_session
-        response.should render_template("edit")
-      end
-    end
   end
 
   describe "DELETE destroy" do
