@@ -11,7 +11,7 @@ Second lab iteration off of [Rails Blog Scaffold](https://github.com/flatiron-sc
 ## Migrations, Associations, and Routes
 
 1. Change migration for Post to include content (make content text to account of character length).
-2. Create migration, model, controller, and views for User and Tag (via scaffolding).
+2. Create migration, model, controller, and views for User and Tag (via rails generate).
 3. In order to create the appropriate associations between Post and Tag, we need to create a join table as well.
 4. Build out model associations.
 5. Be sure to make the appropriate routes. For now, they can be resources.
