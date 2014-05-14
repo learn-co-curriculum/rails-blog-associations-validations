@@ -14,12 +14,12 @@ Second lab iteration off of [Rails Blog Scaffold](https://github.com/flatiron-sc
 2. Create migration, model, controller, and views for User and Tag (via rails generate).
 3. In order to create the appropriate associations between Post and Tag, we need to create a join table as well.
 4. Build out model associations.
-5. Be sure to make the appropriate routes. For now, they can be resources.
+5. Be sure to make the appropriate routes. For now, they can be written as `resources`.
 6. `create` the database, `migrate` the schema, and `seed` it.
 
 ## Validations
 
-Active Record has handy methods you can place on columns in a table to validate certain attributes, like presence, length, and uniqueness. These are called on a controller. Check out the [documentation](http://guides.rubyonrails.org/active_record_validations.html) to see more.
+Active Record has handy methods you can place on columns in a table to validate certain attributes, like presence, length, and uniqueness. These are called on a model. Check out the [documentation](http://guides.rubyonrails.org/active_record_validations.html) to see more.
 
 Let's add the following validations on:
 
