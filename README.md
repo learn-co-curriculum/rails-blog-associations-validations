@@ -8,10 +8,6 @@ resources: 3
 
 Second lab iteration off of [Rails Blog Scaffold](https://github.com/flatiron-school-curriculum/rails-blog-scaffold/tree/master)
 
-## Initial Setup
-
-This lab requires passing controller and model specs. We've already built many of them out, but in order to migrate the database, some needed to be commented out. Uncomment the model specs (`post_spec.rb`, `tag_spec.rb`, `user_spec.rb`), and the factory (`posts.rb`). The Controller specs will be generated when you scaffold, and you will need to get them to pass by adding more `valid_attributes` as per what you end up permitting in your params.
-
 ## Migrations, Associations, and Routes
 
 1. Change migration for Post to include content (make content text to account of character length).
@@ -48,7 +44,7 @@ Active Record handles errors when validations aren't met via user input on our f
   <% end %>
 ```
 
-Build out the forms for creating a new user, post, and tag and make the tests pass. Don't worry about the failing scaffolded controller tests that are failing; our validation tests in the models are now covering that.
+Build out the forms for creating a new user, post, and tag and make the tests pass.
 
 ## Adding tags to a post
 
