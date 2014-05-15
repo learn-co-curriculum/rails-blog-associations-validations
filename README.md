@@ -1,5 +1,5 @@
 ---
-tags: rails, associations, validations, join tables, strong params, WIP
+tags: rails, associations, validations, join tables, strong params
 language: ruby
 resources: 3
 ---
@@ -11,15 +11,15 @@ Second lab iteration off of [Rails Blog Scaffold](https://github.com/flatiron-sc
 ## Migrations, Associations, and Routes
 
 1. Change migration for Post to include content (make content text to account of character length).
-2. Create migration, model, controller, and views for User and Tag (via scaffolding).
+2. Create migration, model, controller, and views for User and Tag (via rails generate).
 3. In order to create the appropriate associations between Post and Tag, we need to create a join table as well.
 4. Build out model associations.
-5. Be sure to make the appropriate routes. For now, they can be resources.
+5. Be sure to make the appropriate routes. For now, they can be written as `resources`.
 6. `create` the database, `migrate` the schema, and `seed` it.
 
 ## Validations
 
-Active Record has handy methods you can place on columns in a table to validate certain attributes, like presence, length, and uniqueness. These are called on a controller. Check out the [documentation](http://guides.rubyonrails.org/active_record_validations.html) to see more.
+Active Record has handy methods you can place on columns in a table to validate certain attributes, like presence, length, and uniqueness. These are called on a model. Check out the [documentation](http://guides.rubyonrails.org/active_record_validations.html) to see more.
 
 Let's add the following validations on:
 
