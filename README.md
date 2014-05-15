@@ -48,6 +48,6 @@ Build out the forms for creating a new user, post, and tag and make the tests pa
 
 ## Adding tags to a post
 
-You've got a great post on kittens that was generated via the seed file, but you want to add some tags, for a later feature that will help readers search for posts. Create a form on the posts show page that lists all the tags as checkboxes that.
+You've got a great post on kittens that was generated via the seed file, but you want to add some tags, for a later feature that will help readers search for posts. Create a form on the posts show page that lists all the tags as checkboxes, where a user can select multiple tags. For now, this action will be handled on the Posts controller via the update action. 
 
 Check out the documentation for the `collection_check_boxes` form helper [here](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes) and this post on strong params to be able to make the association between Post and Tag via the Post_Tag join model [here](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters).
