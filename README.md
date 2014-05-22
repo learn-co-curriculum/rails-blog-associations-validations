@@ -12,14 +12,15 @@ Second lab iteration off of [Rails Blog Scaffold](https://github.com/flatiron-sc
 
 1. Change migration for Post to include content (make content text to account of character length).
 2. Create migration, model, controller, and views for User and Tag (via rails generate).
-3. In order to create the appropriate associations between Post and Tag, we need to create a join table as well.
-4. Build out model associations.
-5. Be sure to make the appropriate routes. For now, they can be written as `resources`.
-6. `create` the database, `migrate` the schema, and `seed` it.
+3. A User has a name, and a Tag has a name.
+4. In order to create the appropriate associations between Post and Tag, we need to create a join table as well. Remember, join tables only have foreign keys for the tables its joining.
+5. Build out model associations.
+6. Be sure to make the appropriate routes. For now, they can be written as `resources`.
+7. `create` the database, `migrate` the schema, and `seed` it.
 
 ## Validations
 
-Active Record has handy methods you can place on columns in a table to validate certain attributes, like presence, length, and uniqueness. These are called on a model. Check out the [documentation](http://guides.rubyonrails.org/active_record_validations.html) to see more.
+Active Record has handy methods you can place on columns in a table to validate certain attributes, like presence, length, and uniqueness. These are called in a model. Check out the [documentation](http://guides.rubyonrails.org/active_record_validations.html) to see more.
 
 Let's add the following validations on:
 
@@ -44,11 +45,11 @@ Active Record handles errors when validations aren't met via user input on our f
   <% end %>
 ```
 
-Build out the forms for creating a new user, post, and tag and make the tests pass.
+Build out the forms for creating a new user, post, and tag and make the tests pass (run `rspec`).
 
 ## Adding tags to a post
 
-You've got a great post on kittens that was generated via the seed file, but you want to be able to add some tags, for a later feature that will help readers search for posts. Create a form on the posts form page that lists all the tags as checkboxes, where a user can select multiple tags. This action will be handled on the Posts controller via the create action. 
+You've got a great post on kittens that was generated via the seed file, but you want to be able to add some tags. Create a form on the posts form page that lists all the tags as checkboxes, where a user can select multiple tags.
 
 Check out the documentation for the `collection_check_boxes` form helper [here](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes) and this post on strong params to be able to make the association between Post and Tag via the Post_Tag join model [here](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters).
 
