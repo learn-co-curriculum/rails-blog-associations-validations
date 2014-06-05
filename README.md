@@ -11,12 +11,12 @@ Second lab iteration off of [Rails Blog Scaffold](https://github.com/flatiron-sc
 ## Migrations, Associations, and Routes
 
 1. Change migration for Post to include content (make content text to account of character length).
-2. Create migration, model, controller, and views for User and Tag (when generating models, run `rails g model [model_name] --skip spec/models/[model_name]_spec.rb`, because we already have model unit tests to test our validations).
-3. A User has a name, and a Tag has a name.
-4. In order to create the appropriate associations between Post and Tag, we need to create a join table as well. Remember, join tables only have foreign keys for the tables its joining.
-5. Build out model associations.
-6. Be sure to make the appropriate routes. For now, they can be written as `resources`.
-7. `create` the database, `migrate` the schema, and `seed` it.
+2. Create migration, model, controller, and views for User and Tag (via rails generate). Check out the documentation on [generators](http://api.rubyonrails.org/classes/Rails/Generators.html); you should be skipping adding tests.
+3. In order to create the appropriate associations between Post and Tag, we need to create a join table as well.
+4. Build out model associations and migrations.
+5. Be sure to make the appropriate routes. For now, they can be written as `resources`.
+6. `create` the database, `migrate` the schema, and `seed` it.
+7. Make the model association tests pass.
 
 ## Validations
 
@@ -45,7 +45,7 @@ Active Record handles errors when validations aren't met via user input on our f
   <% end %>
 ```
 
-Build out the forms for creating a new user, post, and tag and make the tests pass (run `rspec`).
+1. Build out the forms for creating a new user, post, and tag.
 
 ## Adding tags to a post
 
@@ -53,10 +53,15 @@ You've got a great post on kittens that was generated via the seed file, but you
 
 Check out the documentation for the `collection_check_boxes` form helper [here](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes) and this post on strong params to be able to make the association between Post and Tag via the Post_Tag join model [here](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters).
 
+1. Make the tests in `features/tags_for_posts_spec.rb` pass.
+
 ## Resources
 
 [Active Record Validations](http://guides.rubyonrails.org/active_record_validations.html)
 
 [Check Boxes](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes)
+
+[Strong Params Array](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters)
+/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes)
 
 [Strong Params Array](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters)
