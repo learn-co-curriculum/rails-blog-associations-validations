@@ -26,7 +26,7 @@ Let's add the following validations on:
 
 1. Posts for the presence of both name and content
 2. User for uniqueness of name
-3. Tag for presence and uniqueness of name
+3. Tag for uniqueness of name
 
 Active Record handles errors when validations aren't met via user input on our forms. Take a look at what's happening in the partial `_form.html.erb` for users, which was generated when we scaffolded:
 
