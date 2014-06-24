@@ -2,15 +2,15 @@ require 'spec_helper'
 
 describe Post do
   context 'Post validations' do 
-    its "post is valid" do 
+    it "post is valid" do 
       expect(Post.create(name: "hi", content: "hello")).to be_valid
     end
 
-    its "invalid with no name" do 
+    it "invalid with no name" do 
       expect(Post.create(name: nil, content: "i have no name")).to_not be_valid
     end
 
-    its "invalid with no content" do 
+    it "invalid with no content" do 
       expect(Post.create(name: "Name", content: nil)).to_not be_valid
     end
   end
