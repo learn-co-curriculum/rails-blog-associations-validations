@@ -8,6 +8,8 @@ resources: 3
 
 Second lab iteration off of [Rails Blog Scaffold](https://github.com/flatiron-school-curriculum/rails-blog-scaffold/tree/master)
 
+<em>Before anything</em>, note that when you generate models, controllers, etc, be sure to include this option, so that it skips tests (which we already have): `--no-test-framework`
+
 ## Migrations, Associations, and Routes
 
 1. Change migration for Post to include content (make content text to account of character length).
