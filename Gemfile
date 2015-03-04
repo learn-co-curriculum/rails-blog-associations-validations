@@ -38,7 +38,6 @@ group :test, :development do
   gem "capybara"
   gem "selenium-webdriver"
   gem "better_errors"
-  gem "sprockets_better_errors"
   gem "binding_of_caller"
   gem "factory_girl_rails"
   gem "simplecov"
