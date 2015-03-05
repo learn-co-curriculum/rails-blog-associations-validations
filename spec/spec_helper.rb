@@ -14,14 +14,14 @@ ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-  config.use_transactional_fixtures = true
+  config.use_transactional_fixtures = false
   config.infer_base_class_for_anonymous_controllers = false
   config.order = "default"
   config.include Capybara::DSL
-  
+
   DatabaseCleaner.strategy = :truncation
 
-  config.before(:each) do 
+  config.before(:each) do
     @crookshanks = User.create(name: "Crookshanks")
     @kitten = User.create(name: "Kitten")
     @post1 = @crookshanks.posts.create(name: "post title", content: "post content")
@@ -33,7 +33,7 @@ RSpec.configure do |config|
     PostTag.create(:tag_id => @tag2.id, :post_id => @post1.id)
   end
 
-  config.after(:all) do 
+  config.after(:each) do
     DatabaseCleaner.clean
   end
 end
