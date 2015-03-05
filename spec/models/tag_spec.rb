@@ -1,8 +1,6 @@
-require 'spec_helper'
-
 describe Tag do
   context 'Tag validations' do
-    it "tag is valid" do 
+    it "tag is valid" do
       expect(Tag.create(name: "happy")).to be_valid
     end
 
@@ -13,7 +11,7 @@ describe Tag do
   end
 
   context 'Tag relationship to Post' do
-    it 'has many posts' do 
+    it 'has many posts' do
       expect(@tag1.posts.count).to eq(2)
     end
   end
