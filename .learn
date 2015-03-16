@@ -1,0 +1,9 @@
+tags:
+  - rails
+  - associations
+  - validations
+  - join tables
+  - strong params
+languages:
+  - ruby
+resources: 3
