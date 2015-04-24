@@ -6,7 +6,7 @@ resources: 3
 
 # Rails Blog Associations and Validations
 
-Second lab iteration off of [Rails Blog Scaffold](https://github.com/flatiron-school-curriculum/rails-blog-scaffold/tree/master)
+Second lab iteration off of [Rails Blog Scaffold](https://github.com/learn-co-curriculum/rails-blog-scaffold/tree/master)
 
 <em>Before anything</em>, note that when you generate models, controllers, etc, be sure to include this option, so that it skips tests (which we already have): `--no-test-framework`
 
