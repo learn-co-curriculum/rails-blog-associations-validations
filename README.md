@@ -12,7 +12,7 @@ Second lab iteration off of [Rails Blog Scaffold](https://github.com/learn-co-cu
 
 ## Migrations, Associations, and Routes
 
-1. Change migration for Post to include content (make content text to account of character length).
+1. Change migration for Post to include content (make content text to account for character length).
 2. Create migration, model, controller, and views for User and Tag (via rails generate). Check out the documentation on [generators](http://api.rubyonrails.org/classes/Rails/Generators.html); you should be skipping adding tests.
 3. In order to create the appropriate associations between Post and Tag, we need to create a join table as well.
 4. Build out model associations and migrations.
