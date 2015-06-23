@@ -1,15 +1,10 @@
----
-tags: rails, associations, validations, join tables, strong params
-language: ruby
-resources: 3
----
-
 #Objectives:
-- Add a column to an existing table via a migration.
-- Generate models, views, controllers for User and Tag classes.
-- Create associations between Post and Tag via a join table.
+- Add a column to an existing table.
+- Generate models, views and controllers.
+- Create associations between models.
 - Define proper routes.
-- Add validations to your models.
+- Add validations.
+
 
 # Rails Blog Associations and Validations
 

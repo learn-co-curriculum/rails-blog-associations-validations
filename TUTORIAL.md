@@ -1,9 +1,9 @@
 #Objectives:
-- Add a column to an existing table via a migration.
-- Generate models, views, controllers for User and Tag classes.
-- Create associations between Post and Tag via a join table.
+- Add a column to an existing table.
+- Generate models, views and controllers.
+- Create associations between models.
 - Define proper routes.
-- Add validations to your models.
+- Add validations.
 
 ###In order to complete this lab, you are going to have to follow the README carefully as well as follow the tests.
 
