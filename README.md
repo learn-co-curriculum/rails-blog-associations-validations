@@ -1,9 +1,3 @@
----
-tags: rails, associations, validations, join tables, strong params
-language: ruby
-resources: 3
----
-
 #Objectives:
 - Add a column to an existing table via a migration.
 - Generate models, views, controllers for User and Tag classes.
