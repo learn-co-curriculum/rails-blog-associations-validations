@@ -4,6 +4,13 @@ language: ruby
 resources: 3
 ---
 
+#Objectives:
+- Add a column to an existing table via a migration.
+- Generate models, views, controllers for User and Tag classes.
+- Create associations between Post and Tag via a join table.
+- Define proper routes.
+- Add validations to your models.
+
 # Rails Blog Associations and Validations
 
 Second lab iteration off of [Rails Blog Scaffold](https://github.com/learn-co-curriculum/rails-blog-scaffold/tree/master)
