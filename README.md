@@ -1,8 +1,9 @@
----
-tags: rails, associations, validations, join tables, strong params
-language: ruby
-resources: 3
----
+#Objectives:
+- Add a column to an existing table.
+- Generate models, views and controllers.
+- Create associations between models.
+- Define proper routes.
+- Add validations.
 
 # Rails Blog Associations and Validations
 
@@ -13,7 +14,7 @@ Second lab iteration off of [Rails Blog Scaffold](https://github.com/learn-co-cu
 ## Migrations, Associations, and Routes
 
 1. Change migration for Post to include content (make content text to account for character length).
-2. Create migration, model, controller, and views for User and Tag (via rails generate). Check out the documentation on [generators](http://api.rubyonrails.org/classes/Rails/Generators.html); you should be skipping adding tests.
+2. Create a migration, model and controller for User and Tag (via rails generate). Check out the documentation on [generators](http://api.rubyonrails.org/classes/Rails/Generators.html); you should be skipping adding tests.
 3. In order to create the appropriate associations between Post and Tag, we need to create a join table as well.
 4. Build out model associations and migrations.
 5. Be sure to make the appropriate routes. For now, they can be written as `resources`.
@@ -47,7 +48,7 @@ Active Record handles errors when validations aren't met via user input on our f
   <% end %>
 ```
 
-1. Build out the forms for creating a new user, post, and tag.
+1. Build out the forms for creating a new post.
 
 ## Adding tags to a post
 
@@ -64,4 +65,3 @@ Check out the documentation for the `collection_check_boxes` form helper [here](
 [Check Boxes](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes)
 
 [Strong Params Array](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters)
-
