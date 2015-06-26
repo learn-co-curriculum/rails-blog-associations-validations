@@ -1,8 +1,9 @@
----
-tags: rails, associations, validations, join tables, strong params
-language: ruby
-resources: 3
----
+#Objectives:
+- Add a column to an existing table.
+- Generate models, views and controllers.
+- Create associations between models.
+- Define proper routes.
+- Add validations.
 
 # Rails Blog Associations and Validations
 
