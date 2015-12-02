@@ -65,3 +65,5 @@ Check out the documentation for the `collection_check_boxes` form helper [here](
 [Check Boxes](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes)
 
 [Strong Params Array](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters)
+
+<a href='https://learn.co/lessons/rails-blog-associations-validations' data-visibility='hidden'>View this lesson on Learn.co</a>
