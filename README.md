@@ -1,20 +1,21 @@
-#Objectives:
+# Rails Blog Associations and Validations
+
+This is the second lab iteration off of [Rails Blog Scaffold](https://github.com/learn-co-curriculum/rails-blog-scaffold/tree/master)
+
+<em>Before anything</em>, note that when you generate models, controllers, etc, be sure to include this option, so that it skips tests (which we already have): `--no-test-framework`
+
+## Objectives:
+
 - Add a column to an existing table.
 - Generate models, views and controllers.
 - Create associations between models.
 - Define proper routes.
 - Add validations.
 
-# Rails Blog Associations and Validations
-
-Second lab iteration off of [Rails Blog Scaffold](https://github.com/learn-co-curriculum/rails-blog-scaffold/tree/master)
-
-<em>Before anything</em>, note that when you generate models, controllers, etc, be sure to include this option, so that it skips tests (which we already have): `--no-test-framework`
-
 ## Migrations, Associations, and Routes
 
 1. Change migration for Post to include content (make content text to account for character length).
-2. Create migration, model, controller, and views for User and Tag (via rails generate). Check out the documentation on [generators](http://api.rubyonrails.org/classes/Rails/Generators.html); you should be skipping adding tests.
+2. Create a migration, model and controller for User and Tag (via rails generate). Check out the documentation on [generators](http://api.rubyonrails.org/classes/Rails/Generators.html); you should be skipping adding tests.
 3. In order to create the appropriate associations between Post and Tag, we need to create a join table as well.
 4. Build out model associations and migrations.
 5. Be sure to make the appropriate routes. For now, they can be written as `resources`.
@@ -48,7 +49,7 @@ Active Record handles errors when validations aren't met via user input on our f
   <% end %>
 ```
 
-1. Build out the forms for creating a new user, post, and tag.
+1. Build out the forms for creating a new post.
 
 ## Adding tags to a post
 
@@ -65,3 +66,7 @@ Check out the documentation for the `collection_check_boxes` form helper [here](
 [Check Boxes](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes)
 
 [Strong Params Array](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters)
+
+
+<a href='https://learn.co/lessons/rails-blog-associations-validations' data-visibility='hidden'>View this lesson on Learn.co</a>
+
