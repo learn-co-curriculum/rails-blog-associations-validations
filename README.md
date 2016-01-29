@@ -66,4 +66,4 @@ Check out the documentation for the `collection_check_boxes` form helper [here](
 
 [Strong Params Array](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters)
 
-<a href='https://learn.co/lessons/rails-blog-associations-validations' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-blog-associations-validations' title='Rails Blog Associations and Validations'>Rails Blog Associations and Validations</a> on Learn.co and start learning to code for free.</p>
