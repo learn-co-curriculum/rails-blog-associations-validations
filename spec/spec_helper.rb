@@ -21,18 +21,6 @@ RSpec.configure do |config|
 
   DatabaseCleaner.strategy = :truncation
 
-  config.before(:each) do
-    @crookshanks = User.create(name: "Crookshanks")
-    @kitten = User.create(name: "Kitten")
-    @post1 = Post.create(user_id: @crookshanks.id, name: "post title", content: "post content")
-    @post2 = Post.create(user_id: @crookshanks.id, name: "my second post", content: "post content")
-    @tag1 = Tag.create(name: "cute")
-    @tag2 = Tag.create(name: "adorable")
-    PostTag.create(:tag_id => @tag1.id, :post_id => @post1.id)
-    PostTag.create(:tag_id => @tag1.id, :post_id => @post2.id)
-    PostTag.create(:tag_id => @tag2.id, :post_id => @post1.id)
-  end
-
   config.after(:each) do
     DatabaseCleaner.clean
   end
