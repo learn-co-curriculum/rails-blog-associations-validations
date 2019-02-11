@@ -41,6 +41,6 @@ group :test, :development do
   gem "factory_girl_rails"
   gem "simplecov"
   gem "database_cleaner"
-  gem "sqlite3"
+gem 'sqlite3', '~> 1.3.6'
   gem "pry"
 end
