@@ -43,7 +43,7 @@ In your console run `rails generate model PostTag post_id:integer tag_id:integer
 
 Now that you've migrated, you can run `rspec` and begin working on your tests.
 
-The first thing we want to do is create our associations between `User` and `Post`. If we think about how a blog works, a user can `have_many` posts and a `Post` `belongs_to` a `User`. Open up `models/post.rb` and `models/user.rb` and create the following associations.
+The first thing we want to do is create our associations between `User` and `Post`. If we thing about how a blog works, a user can `have_many` posts and a `Post` `belongs_to` a `User`. Open up `models/post.rb` and `models/user.rb` and create the following associations.
 
 ###`models/user.rb`
 
@@ -71,12 +71,15 @@ When you use `AddTableNameToTableName attribute:type`, by convention rails looks
 So now that we've migrated, let's run `rspec`. We can see that we have a few green tests, great!. 
 
 ###`user_spec.rb`
-
 - `invalid with no name`
+
 - `invalid if name already exists`
 
 Our validation errors will be handled in the models. Open up `models/user.rb` and add the following associations. 
 
+
+- `invalid with no name`
+- `invalid if name already exists`
 
 ```ruby
 class User < ActiveRecord::Base
