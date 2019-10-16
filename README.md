@@ -14,7 +14,7 @@ This is the second lab iteration off of [Rails Blog Scaffold](https://github.com
 ## Migrations, Associations, and Routes
 
 1. Change the migration for `posts` to include `content` (set `content`'s datatype to `text` to account for character length).
-2. Create a migration, model and controller for `User` and `Tag` (via `rails generate`). Check out the documentation on [generators](http://api.rubyonrails.org/classes/Rails/Generators.html), and remember to skip adding tests.
+2. Create a migration, model, and optionally controller for `User` and `Tag` (via `rails generate`). Check out the documentation on [generators](http://api.rubyonrails.org/classes/Rails/Generators.html), and remember to skip adding tests.
 3. In order to create the appropriate associations between `Post` and `Tag`, we need to create a join table as well.
 4. Build out model associations and migrations.
 5. Be sure to create the appropriate routes. For now, they can be written as `resources`.
