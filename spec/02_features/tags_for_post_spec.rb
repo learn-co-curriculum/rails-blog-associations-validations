@@ -11,7 +11,6 @@ describe 'tags for posts', :type => :feature do
   end
 
   it 'can create a post with adding one tag' do
-    puts cute.inspect
     visit '/posts/new'
     fill_in('Name', :with => 'Post title')
     fill_in('Content', :with => 'post content')
