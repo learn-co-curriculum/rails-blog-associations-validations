@@ -65,5 +65,3 @@ Active Record handles errors when validations aren't met via user input on our f
 [Check Boxes](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes)
 
 [Strong Params Array](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters)
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-blog-associations-validations' title='Rails Blog Associations and Validations'>Rails Blog Associations and Validations</a> on Learn.co and start learning to code for free.</p>
