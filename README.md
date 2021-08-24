@@ -1,7 +1,7 @@
 # Associations and Validations
 
 This is the second lab iteration off of
-[Rails Blog Scaffold](https://github.com/learn-co-curriculum/rails-blog-scaffold/tree/master).
+[Rails Blog Scaffold](https://github.com/learn-co-curriculum/rails-blog-scaffold).
 
 _Remember_: when you generate models, controllers, etc., be sure to include the
 `--no-test-framework` option so that it skips tests (which the labs already
@@ -81,8 +81,6 @@ Make the tests in `features/tags_for_posts_spec.rb` pass.
 
 ## Resources
 
-[Active Record Validations](http://guides.rubyonrails.org/active_record_validations.html)
-
-[Check Boxes](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes)
-
-[Strong Params Array](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters)
+- [Active Record Validations](http://guides.rubyonrails.org/active_record_validations.html)
+- [Check Boxes](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes)
+- [Strong Params Array](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters)
