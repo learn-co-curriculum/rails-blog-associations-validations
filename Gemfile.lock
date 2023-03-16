@@ -94,6 +94,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.12.3-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.12.3-x86_64-linux)
+      racc (~> 1.4)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -102,7 +104,7 @@ GEM
       pry (~> 0.13.0)
     public_suffix (4.0.6)
     racc (1.5.2)
-    rack (2.2.3)
+    rack (2.2.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
     rack_session_access (0.2.0)
@@ -189,6 +191,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
